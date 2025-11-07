@@ -1,0 +1,271 @@
+/* Reset and Base Setup */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Urbanist", sans-serif;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background-color: #0a0f12;
+  color: #fff;
+}
+
+/* Heading Styles */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Urbanist", sans-serif;
+  font-weight: 900;
+}
+
+h1 {
+  font-size: 3.2rem;
+  font-weight: bold;
+}
+
+/* ---------------------------- */
+/* 📋 Todo Container Section */
+/* ---------------------------- */
+.todo-container {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  padding-top: 3%;
+  background-image: linear-gradient(100deg, #001214, #001f29);
+  color: white;
+  transition: 0.3s linear;
+  overflow: hidden;
+}
+
+.header {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  font-size: 3rem;
+  min-height: 25vh;
+  width: 100%;
+}
+
+section h1 {
+  color: #fff;
+  font-size: 4.8rem;
+  text-align: center;
+}
+
+/* ---------------------------- */
+/* 🕒 Date and Time */
+/* ---------------------------- */
+.date-time {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #00b894;
+  font-weight: 700;
+  font-size: 1.6rem;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 8px 14px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0, 255, 180, 0.3);
+}
+
+.clock-icon {
+  font-size: 1.6rem;
+  color: #00b894;
+}
+
+/* ---------------------------- */
+/* ✍️ Form Styling */
+/* ---------------------------- */
+form {
+  display: flex;
+  font-size: 1.7rem;
+  justify-content: center;
+  margin: 15px 0;
+  padding: 0.8rem;
+  width: 100%;
+}
+
+form input {
+  padding: 10px;
+  font-size: 1.8rem;
+  letter-spacing: 0.1rem;
+  border: none;
+  outline: none;
+  border-top-left-radius: 17px;
+  border-bottom-left-radius: 17px;
+  max-width: 500px;
+  width: 100%;
+  background-color: #f2f3f4;
+  color: #1c2833;
+  transition: background-color 0.2s ease-in-out, transform 0.2s ease-in-out;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+form input::placeholder {
+  color: #999;
+  opacity: 0.8;
+}
+
+form input:focus {
+  background-color: #ffffff;
+  transform: scale(1.02);
+}
+
+/* 🔮 Neon Add Button */
+form button {
+  padding: 10.8px;
+  font-size: 1.7rem;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  min-width: 120px;
+  font-weight: 600;
+  letter-spacing: 0.8px;
+  color: #fff;
+  background: linear-gradient(90deg, #00f5ff, #00c3ff, #0072ff);
+  border: none;
+  outline: none;
+  cursor: pointer;
+  position: relative;
+  z-index: 1;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 0 10px rgba(0, 255, 255, 0.6),
+    0 0 20px rgba(0, 195, 255, 0.4);
+}
+
+form button:hover {
+  background: linear-gradient(90deg, #00e6ff, #00aaff, #005eff);
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.9),
+    0 0 25px rgba(0, 195, 255, 0.7),
+    0 0 40px rgba(0, 195, 255, 0.6);
+  transform: scale(1.03);
+}
+
+form button:active {
+  transform: scale(0.96);
+  box-shadow: 0 0 5px rgba(0, 255, 255, 0.5);
+}
+
+/* ---------------------------- */
+/* ✅ Todo List Section */
+/* ---------------------------- */
+.myUnOrdList {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 1200px;
+}
+
+.todo-list {
+  list-style: none;
+  min-width: 25%;
+}
+
+/* 🧩 Single Todo Item */
+.todo-item {
+  margin: 2.4rem auto;
+  font-size: 1.8rem;
+  color: #1c2833;
+  border-radius: 30px;
+  background-color: #f2f3f4;
+  min-width: 35rem;
+  max-width: 40rem;
+  padding: 1.6rem 2.4rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.2rem;
+  overflow-wrap: anywhere;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.todo-item:hover {
+  transform: scale(1.02);
+  background-color: #ffffff;
+}
+
+/* Actions Container (buttons) */
+.todo-actions {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+/* Buttons for check/delete */
+.check-btn,
+.delete-btn {
+  font-size: 2.2rem;
+  cursor: pointer;
+  width: 3.6rem;
+  height: 3.6rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.check-btn {
+  color: #fff;
+  background-color: #2ecc71;
+  box-shadow: 0 0 10px rgba(46, 204, 113, 0.5);
+}
+
+.check-btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 20px rgba(46, 204, 113, 0.8);
+}
+
+.delete-btn {
+  color: #fff;
+  background-color: #e74c3c;
+  box-shadow: 0 0 10px rgba(231, 76, 60, 0.5);
+}
+
+.delete-btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 20px rgba(231, 76, 60, 0.8);
+}
+
+/* Task Text Styles */
+.todo-item.checked span {
+  text-decoration: line-through;
+  opacity: 0.6;
+  color: #7f8c8d;
+}
+
+/* Check Button Styles */
+.check-btn[aria-pressed="true"] { /* optional extra glow when checked */ box-shadow: 0 0 10px rgba(46,204,113,0.6); }
+
+.notCheckList {
+  text-decoration: none;
+}
+
+/* Clear Button */
+.clear-btn {
+  background-color: #e74c3c;
+  font-size: 1.6rem;
+  padding: 1rem 2.2rem;
+  border-radius: 0.5rem;
+  color: white;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.clear-btn:hover {
+  background-color: #b71500;
+  transform: scale(1.03);
+  }
