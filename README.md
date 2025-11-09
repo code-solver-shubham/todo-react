@@ -7,7 +7,7 @@ Manage your daily tasks with ease, mark them as complete, and keep your progress
 
 ## 🚀 Live Demo
 
-👉 [View Live on Vercel](https://your-vercel-link.vercel.app)  
+👉 [View Live on Vercel]()  
 *(Replace with your actual link once deployed)*
 
 ---
