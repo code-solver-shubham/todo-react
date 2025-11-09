@@ -1,8 +1,8 @@
 // Todo.jsx
 import "./Todo.css";
 import { useState } from "react";
-import { Todoform } from "./Todoform";
-import { TaskList } from "./TaskList";
+import { Todoform } from "./Todoform.jsx";
+import { TaskList } from "./TaskList.jsx";
 import { DateTime } from "./Date-Time";
 import { useEffect } from "react";
 
