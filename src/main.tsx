@@ -13,6 +13,7 @@ if (rootElement) {
       <App />
     </React.StrictMode>
   );
-} else { console.error("error")
-}
+} else {
+ console.error("error")
+
 }
