@@ -13,6 +13,6 @@ if (rootElement) {
       <App />
     </React.StrictMode>
   );
-} else {
-  console.error("Root element not found. Please check index.html");
+} else { console.error("error")
+}
 }
