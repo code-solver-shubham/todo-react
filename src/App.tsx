@@ -1,5 +1,4 @@
-import { Todo } from "./Project/Todo/Todo";
-
+import Todo from "../Project/Todo/Todo.jsx";
 const App = () => {
   return (
     <>
